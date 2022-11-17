@@ -48,23 +48,23 @@
     background: transparent;
     border-color: var( --color-primary);
     cursor: pointer;
-    background-color: white;
+    background-color: var(--color-primary);
 }
 
 .about_icon {
-    color: var(--color-primary);
+    color: var(--color-light);
     font-size: 1.4rem;
     margin-bottom: 1rem;
 }
 
 .about_card h5 {
-    color:  var(--color-primary);
+    color:  var(---color-light);
     font-size: 0.95rem;
 }
 
 .about_card small {
     font-size: 0.7;
-    color:  var(--color-primary);
+    color:  var(--color-light);
 }
 
 .about_card p {
