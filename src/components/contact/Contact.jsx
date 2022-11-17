@@ -3,7 +3,23 @@ import './contact.css'
 import {MdEmail} from 'react-icons/md'
 import {AiTwotonePhone} from 'react-icons/ai'
 
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser';
+
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_e70t7cb', 'template_iw9vs57', form.current, 'DogkjLYYiSex_T9C4')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+      e.target.reset()
+  };
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
@@ -24,7 +40,7 @@ const Contact = () => {
             </article>
         </div>
 
-        <form action="">
+        <form ref={form} onSubmit={sendEmail}>
           <input type="text" name='name' placeholder='Name' required />
           <input type="email" name='email' placeholder='Email' required />
           <textarea name="message" rows="7" placeholder='Message' required></textarea>
