@@ -37,6 +37,7 @@ const Contact = () => {
           <AiTwotonePhone className="contact_option-icon"/>
             <h4>Phone</h4>
             <h5>027 392 9011</h5>
+            <a href="mailto:hcnd90@gmail.com">Send a Message</a>
             </article>
         </div>
 
@@ -44,7 +45,7 @@ const Contact = () => {
           <input type="text" name='name' placeholder='Name' required />
           <input type="email" name='email' placeholder='Email' required />
           <textarea name="message" rows="7" placeholder='Message' required></textarea>
-          <button type='submit' className='btn btn-primary'>Submit Message</button>
+          <button type='submit' className='btn btn-primary'>SUBMIT</button>
         </form>
       </div>
     </section>

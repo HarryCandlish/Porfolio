@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/me-about.jpg'
+import DOG from '../../assets/dog.jpg'
 import {BsFillAwardFill} from 'react-icons/bs'
 import {FaUsers} from 'react-icons/fa'
 import {GiFilmProjector} from 'react-icons/gi'
@@ -14,7 +14,7 @@ const About = () => {
       <div className="container about_container">
         <div className="about_me">
           <div className="about_me-image">
-            <img src={ME} alt="About Image" />
+            <img src={DOG} alt="About Image" />
           </div>
         </div>
 

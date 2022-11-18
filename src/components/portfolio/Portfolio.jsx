@@ -8,21 +8,24 @@ const data = [
   {
   id: 1,
   image: IMG1,
-  title: 'books',
+  title: 'BOOKS',
+  description: 'Lorem Ipsum is simply dummy text of the printing and typese',
   github: 'https://github.com',
   demo: '#'
   },
   {
     id: 2,
     image: IMG2,
-    title: 'animals',
+    title: 'ANIMALS',
+    description: 'Lorem Ipsum is simply dummy text of the printing and typese',
     github: 'https://github.com',
     demo: '#'
     },
     {
       id: 3,
       image: IMG3,
-      title: 'writing',
+      title: 'WRITING',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typese',
       github: 'https://github.com',
       demo: '#'
       }
@@ -36,16 +39,18 @@ const Portfolio = () => {
 
       <div className="container portfolio_container">
           {
-            data.map(({id, image, title, github, demo}) => {
+            data.map(({id, image, title, github, demo, description}) => {
              return (
               <article className='portfolio_item'>
               <div className="portfolio_item-image">
                 <img src={image} alt={title}/>
               </div>
                   <h3>{title}</h3>
+                  <p>{description}</p>
                   <div className="portfolio_item-cta">
-                  <a href={github} className='btn' target='_blank'>GitHub</a>
-                  <a href={demo} className='btn' target='_blank'>Website</a>
+                  <a href={github}>Github</a>
+                  <p>|</p>
+                  <a href={demo}>Website</a>
                   </div>
             </article>
             )
